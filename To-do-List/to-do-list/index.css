@@ -1,7 +1,18 @@
-h1 {
+body{
+    text-align: center;
+    align-content: center;
+    border: solid  black;
+   /* background-image: url(https://image.shutterstock.com/image-vector/abstract-smooth-light-blue-perspective-260nw-544821844.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+    h1 {
     text-align: center;
 }
 
 li > span {
     color: red;
 }
+
+
+

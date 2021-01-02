@@ -40,26 +40,29 @@ function refreshTodos() {
 function addTodoToList(todoItem, todoId) {
     const li = document.createElement("li");
     li.setAttribute('todo-id', todoId);
-
+    li.classList.add("list-group-item")
     const span = document.createElement("span");
     span.innerText = todoItem.task;
     
     const checkbox = document.createElement("input");
     checkbox.setAttribute('type', 'checkbox');
     checkbox.onclick = toggleCheckbox;
-
+   // checkbox.classList.add(checkbox);//
     const dltBtn = document.createElement('button');
-    dltBtn.innerText = 'X';
+    dltBtn.innerText = '';
+    dltBtn.innerHTML='<i class="fa fa-trash" aria-hidden="true"></i>';
     dltBtn.onclick = deleteTodo;
 
     const upBtn = document.createElement('button');
-    upBtn.innerText = '^';
+    upBtn.innerText= ''
+    upBtn.innerHTML = '<i class="fa fa-caret-up" ></i>';
     upBtn.onclick = moveTodoUp;
 
     const downBtn = document.createElement('button');
     downBtn.innerText = 'v';
+    downBtn.innerHTML = '<i class="fa fa-caret-down" ></i>';
     downBtn.onclick = moveTodoDown;
-
+    
     if(todoItem.done) {
         checkbox.setAttribute('checked', true);
         span.style.textDecoration = 'line-through';
@@ -121,5 +124,3 @@ function swap(index1, index2) {
     todos[index1] = todoAtIndex2;
     todos[index2] = todoAtIndex1;
 }
-
-

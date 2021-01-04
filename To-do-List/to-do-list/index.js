@@ -40,29 +40,36 @@ function refreshTodos() {
 function addTodoToList(todoItem, todoId) {
     const li = document.createElement("li");
     li.setAttribute('todo-id', todoId);
-    li.classList.add("list-group-item")
+    li.classList.add('list-group-item');
+
     const span = document.createElement("span");
     span.innerText = todoItem.task;
     
     const checkbox = document.createElement("input");
     checkbox.setAttribute('type', 'checkbox');
-    checkbox.onclick = toggleCheckbox;
-   // checkbox.classList.add(checkbox);//
+    checkbox.onchange = toggleCheckbox;
+
+    const dltIcon = document.createElement("i");
+    dltIcon.className = 'fa fa-trash';
     const dltBtn = document.createElement('button');
-    dltBtn.innerText = '';
-    dltBtn.innerHTML='<i class="fa fa-trash" aria-hidden="true"></i>';
+    dltBtn.className = "btn btn-danger";
+    dltBtn.appendChild(dltIcon);
     dltBtn.onclick = deleteTodo;
 
+    const upIcon = document.createElement('i');
+    upIcon.className = 'fa fa-chevron-up';
     const upBtn = document.createElement('button');
-    upBtn.innerText= ''
-    upBtn.innerHTML = '<i class="fa fa-caret-up" ></i>';
+    upBtn.className = 'btn btn-light';
+    upBtn.appendChild(upIcon);
     upBtn.onclick = moveTodoUp;
 
+    const downIcon = document.createElement('i');
+    downIcon.className = 'fa fa-chevron-down';
     const downBtn = document.createElement('button');
-    downBtn.innerText = 'v';
-    downBtn.innerHTML = '<i class="fa fa-caret-down" ></i>';
+    downBtn.className = 'btn btn-light';
+    downBtn.appendChild(downIcon);
     downBtn.onclick = moveTodoDown;
-    
+
     if(todoItem.done) {
         checkbox.setAttribute('checked', true);
         span.style.textDecoration = 'line-through';
@@ -89,7 +96,11 @@ function toggleCheckbox(event) {
 }
 
 function deleteTodo(event) {
-    const deleteIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    let deleteIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    if(Number.isNaN(deleteIndex)){
+        deleteIndex = parseInt(event.target.parentElement.parentElement.getAttribute('todo-id'))
+    }
+    
     const newTodos = [];
     for(let i=0 ; i<todos.length ; i++) {
         if(i !== deleteIndex) {
@@ -101,7 +112,11 @@ function deleteTodo(event) {
 }
 
 function moveTodoUp(event) {
-    const upIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    let upIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    if(Number.isNaN(upIndex)){
+        upIndex = parseInt(event.target.parentElement.parentElement.getAttribute('todo-id'))
+    }
+
     if(upIndex !== 0) {
         swap(upIndex, upIndex - 1);
         refreshTodos();
@@ -109,7 +124,11 @@ function moveTodoUp(event) {
 }
 
 function moveTodoDown(event) {
-    const downIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    let downIndex = parseInt(event.target.parentElement.getAttribute('todo-id'));
+    if(Number.isNaN(downIndex)){
+        downIndex = parseInt(event.target.parentElement.parentElement.getAttribute('todo-id'))
+    }
+    
     if(downIndex !== todos.length - 1) {
         swap(downIndex, downIndex + 1);
         refreshTodos();
@@ -124,3 +143,8 @@ function swap(index1, index2) {
     todos[index1] = todoAtIndex2;
     todos[index2] = todoAtIndex1;
 }
+// function handle(e){
+//     if(e.keyCode === 13){
+//     }
+//     return false;
+// }

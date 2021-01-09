@@ -6,7 +6,9 @@ li > span {
     color: red;
 }
 
-#newTask {
-    width: 200px;
-    margin-right: 0!important;
+.red-color {
+    color: red;
 }
+/* html{
+    background-color: cornflowerblue;
+} */

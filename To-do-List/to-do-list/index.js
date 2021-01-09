@@ -40,33 +40,35 @@ function refreshTodos() {
 function addTodoToList(todoItem, todoId) {
     const li = document.createElement("li");
     li.setAttribute('todo-id', todoId);
-    li.classList.add('list-group-item');
+    li.className = 'list-group-item';
 
     const span = document.createElement("span");
     span.innerText = todoItem.task;
+    span.className = 'col-2'
     
     const checkbox = document.createElement("input");
     checkbox.setAttribute('type', 'checkbox');
+    checkbox.className = 'col-1';
     checkbox.onchange = toggleCheckbox;
 
     const dltIcon = document.createElement("i");
     dltIcon.className = 'fa fa-trash';
     const dltBtn = document.createElement('button');
-    dltBtn.className = "btn btn-danger";
+    dltBtn.className = "btn btn-link col-1 red-color";
     dltBtn.appendChild(dltIcon);
     dltBtn.onclick = deleteTodo;
 
     const upIcon = document.createElement('i');
     upIcon.className = 'fa fa-chevron-up';
     const upBtn = document.createElement('button');
-    upBtn.className = 'btn btn-light';
+    upBtn.className = 'btn btn-link col-1';
     upBtn.appendChild(upIcon);
     upBtn.onclick = moveTodoUp;
 
     const downIcon = document.createElement('i');
     downIcon.className = 'fa fa-chevron-down';
     const downBtn = document.createElement('button');
-    downBtn.className = 'btn btn-light';
+    downBtn.className = 'btn btn-link col-1';
     downBtn.appendChild(downIcon);
     downBtn.onclick = moveTodoDown;
 
@@ -76,8 +78,8 @@ function addTodoToList(todoItem, todoId) {
         span.style.color = 'green'
     }
 
-    li.appendChild(span);
     li.appendChild(checkbox);
+    li.appendChild(span);
     li.appendChild(dltBtn);
     if(todoId !==  0) {
         li.appendChild(upBtn);

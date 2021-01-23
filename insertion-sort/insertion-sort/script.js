@@ -7,7 +7,7 @@ function insertionSort(arr) {
               break;
             }
             if (arr[j] < arr[i]) {
-              var temp = arr[i];
+              let temp = arr[i];
               arr[i] = arr[j];
               arr[j] = temp;
               i = i - 1;

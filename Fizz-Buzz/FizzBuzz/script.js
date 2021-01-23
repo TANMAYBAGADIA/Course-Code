@@ -1,10 +1,10 @@
-var list = document.getElementById("list");
-var input = document.getElementById("input");
-var submit = document.getElementById("submit");
+let list = document.getElementById("list");
+let input = document.getElementById("input");
+let submit = document.getElementById("submit");
 
 
 submit.addEventListener('click', function(){
-    var value = input.value;
+    let value = input.value;
     value = parseInt(value);
     print(value);
     

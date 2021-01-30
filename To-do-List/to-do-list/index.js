@@ -45,7 +45,7 @@ function addTodoToList(todoItem, todoId) {
     const span = document.createElement("span");
     span.innerText = todoItem.task;
     span.className = 'col-2'
-    
+
     const checkbox = document.createElement("input");
     checkbox.setAttribute('type', 'checkbox');
     checkbox.className = 'col-1';
@@ -102,7 +102,7 @@ function deleteTodo(event) {
     if(Number.isNaN(deleteIndex)){
         deleteIndex = parseInt(event.target.parentElement.parentElement.getAttribute('todo-id'))
     }
-    
+
     const newTodos = [];
     for(let i=0 ; i<todos.length ; i++) {
         if(i !== deleteIndex) {
@@ -130,7 +130,7 @@ function moveTodoDown(event) {
     if(Number.isNaN(downIndex)){
         downIndex = parseInt(event.target.parentElement.parentElement.getAttribute('todo-id'))
     }
-    
+
     if(downIndex !== todos.length - 1) {
         swap(downIndex, downIndex + 1);
         refreshTodos();

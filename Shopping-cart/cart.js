@@ -37,8 +37,8 @@ let cart = {
   // (C) INITIALIZE
   init : function () {
     // (C1) GET HTML ELEMENTS
-    cart.hProducts = document.getElementById("cart-products");
-    cart.hItems = document.getElementById("cart-items");
+    cart.hProducts = document.getElementById("products-container");
+    cart.hItems = document.getElementById("row");
 
     // (C2) DRAW PRODUCTS LIST
     cart.hProducts.innerHTML = "";

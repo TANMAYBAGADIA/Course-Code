@@ -2,7 +2,8 @@ const products = [
     {
         id: 1,
         name: "Laptop",
-        price: "$1000"
+        price: "$1000",
+        
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ const products = [
         id: 3,
         name: "Microwave",
         price: "$200",
+        image:"Microwave.jpg",
     },
     {
         id: 4,

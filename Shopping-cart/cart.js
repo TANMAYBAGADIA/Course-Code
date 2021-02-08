@@ -20,4 +20,5 @@ for(key in cart) {
     }
   }
 }
+console.log(products);
 

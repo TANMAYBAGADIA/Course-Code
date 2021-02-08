@@ -9,6 +9,7 @@ const products = [
         id: 2,
         name: "Iphone",
         price: "$500",
+        
     },
     {
         id: 3,

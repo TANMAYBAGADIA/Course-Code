@@ -12,7 +12,7 @@ function showProducts(index) {
 
     const img = document.createElement("img");
     img.className = "card-img-top";
-    img.setAttribute("src", "images/laptop.jpeg")
+    img.setAttribute("src", products[index].image)
 
     const cardBodyDiv = document.createElement("div");
     cardBodyDiv.className = "card-body";

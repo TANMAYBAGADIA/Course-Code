@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
-    background: #00ffc8;
+    
   }
   
   *, *:before, *:after {
@@ -12,6 +12,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: 'Amatic SC', cursive;
+    background: #00ffc8;
   }
   
   h1 {

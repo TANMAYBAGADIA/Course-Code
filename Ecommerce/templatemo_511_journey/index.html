@@ -721,11 +721,11 @@ http://www.templatemo.com/tm-511-journey
     <script> 
         /* Google Maps
         ------------------------------------------------*/
-        var map = '';
-        var center;
+        let map = '';
+        let center;
 
         function initialize() {
-            var mapOptions = {
+            let mapOptions = {
                 zoom: 16,
                 center: new google.maps.LatLng(37.769725, -122.462154),
                 scrollwheel: false
@@ -747,7 +747,7 @@ http://www.templatemo.com/tm-511-journey
         }
 
         function loadGoogleMap(){
-            var script = document.createElement('script');
+            let script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
             document.body.appendChild(script);
@@ -772,8 +772,8 @@ http://www.templatemo.com/tm-511-journey
             });
 
             // Date Picker in Search form
-            var pickerCheckIn = datepicker('#inputCheckIn');
-            var pickerCheckOut = datepicker('#inputCheckOut');
+            let pickerCheckIn = datepicker('#inputCheckIn');
+            let pickerCheckOut = datepicker('#inputCheckOut');
 
             // Update nav links on scroll
             $('#tm-top-bar').singlePageNav({

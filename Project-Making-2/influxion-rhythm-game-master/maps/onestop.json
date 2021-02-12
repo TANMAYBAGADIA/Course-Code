@@ -1,0 +1,161 @@
+{
+  "info": {
+    "levelName": "Tutorial",
+    "songName": "Onestop",
+    "path": "onestop.mp3",
+    "background": "dark-mtns.png",
+    "starScores": [8, 16, 32],
+    "noteColor": "white"
+  },
+  "effects": [{
+      "time": "12.64",
+      "effectType": "filters",
+      "effect": "flashStrong",
+      "seconds": 1.7
+    },
+    {
+      "time": "24.4",
+      "effectType": "bounces",
+      "effect": "bounceFoward",
+      "seconds": 0.5
+    },
+    {
+      "time": "36.33",
+      "effectType": "filters",
+      "effect": "flashStrong",
+      "seconds": 0.5
+    }
+  ],
+  "texts": {
+    "text": [{
+
+        "value": "Tutorial",
+        "fontSize": 80,
+        "fontFamily": "Oswald",
+        "fill": "white",
+        "x": 100,
+        "y": 100
+      },
+      {
+
+        "value": "Each Influxion level has two parts: the platformer, and the boss battle.",
+        "fontSize": 20,
+        "fontFamily": "Oswald",
+        "fill": "white",
+        "x": 100,
+        "y": 200
+      },
+      {
+
+        "value": "The CD will create notes to the beat of the music..",
+        "fontSize": 20,
+        "fontFamily": "Oswald",
+        "fill": "white",
+        "x": 1000,
+        "y": 100
+      },
+      {
+
+        "value": "Press space to jump over the notes",
+        "fontSize": 20,
+        "fontFamily": "Oswald",
+        "fill": "white",
+        "x": 1000,
+        "y": 200
+      },
+      {
+
+        "value": "The star will also create large RED Clefs which you can pass through by holding X",
+        "fontSize": 20,
+        "fontFamily": "Oswald",
+        "fill": "white",
+        "x": 1000,
+        "y": 300
+      }
+    ]
+  },
+  "beats": {
+
+    "notes": [{
+        "name": "F7",
+        "midi": 101,
+        "time": 37.7800,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 42.29,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 46.76,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "C#7",
+        "midi": 97,
+        "time": 47.38,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 51.89,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "C7",
+        "midi": 96,
+        "time": 56.99,
+        "velocity": 0.7952755905511811,
+        "duration": 0.3856805468750011
+      },
+      {
+        "name": "C7",
+        "midi": 96,
+        "time": 57.90,
+        "velocity": 0.7952755905511811,
+        "duration": 0.385680546874994
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 62.10,
+        "velocity": 0.7952755905511811,
+        "duration": 0.19580704687500372
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 62.56,
+        "type": "attack",
+        "velocity": 0.7952755905511811,
+        "duration": 0.19580704687500372
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 63.02,
+        "type": "attack",
+        "velocity": 0.7952755905511811,
+        "duration": 0.24327542187499773
+      },
+      {
+        "name": "F7",
+        "midi": 101,
+        "time": 63.48,
+        "type": "attack",
+        "velocity": 0.7952755905511811,
+        "duration": 0.24327542187499773
+      }
+    ]
+  }
+}

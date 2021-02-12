@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Influxion - Welcome</title>
+    <link rel="stylesheet" href="css/shared.css"/>
+    <link rel="stylesheet" href="css/splash-screen.css"/>
+</head>
+<body id="particles">
+    <header>
+        <span class="title">INFLUXION</span><br>
+        <button id="choose-game" class="tab btn">Play The Game</button>
+        <button id="choose-build" class="tab btn">Make A Level</button>
+        <button id="open-credits" class="tab btn">View Credits</button>
+        <div class="enter-name" id="enter-name">
+            <span class='pre-input'>Username:</span>
+            <input id="first-name" type="text" placeholder="John"/>
+            <a id="redirect" data-tooltip="Let's Go!" class="check"><i class="fas fa-check"></i></a>
+        </div>
+        <div id="first-name-error">
+            Please Enter A Username
+        </div>
+    </header>
+    <div id="credits-window">
+        <h1>Credits</h1>
+        <hr>
+        <div class="credits-scroll">
+            <a href="https://fontawesome.com" target="_blank">
+                <div class="credits-tile" 
+                style="background-image: url('img/credits/font-awesome.png')">
+                    <span class="c-name">Icons</span>
+                    <span class="c-source"><span>Font Awesome</span>
+                </div>
+            </a>
+            <a href="https://fonts.google.com" target="_blank">
+                <div class="credits-tile" 
+                style="background-image: url('img/credits/google-fonts.png')">
+                    <span class="c-name">Typography</span>
+                    <span class="c-source"><span>Google Fonts</span></span>
+                </div>
+                
+            </a>
+        </div>
+        <hr>
+        <button id="close-credits" class="btn credits">Okay!</button>
+    </div>
+    <div id="semi-overlay"></div>
+    <div class="loader" id="loader">
+        <div id='cdplayer' class='cdplayer'>
+					<button id="skip" class="btn">Skip To Game</button>
+					<h2 id='lcdScreen' style="font-family: DSEG">headphones are recommended</h2>
+					<img id='cd' src="img/headphones.png"></img>
+					<h4>Influxion CD Player</h4>
+					<br>
+					<i class='fas fa-play'></i><i class='fas fa-stop'></i><i class='fas fa-eject'></i>
+        </div>
+    </div>
+    <script src="js/particles.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Influxion - Game</title>
+	<link href="css/shared.css" rel="stylesheet">
+	<link href="css/game.css" rel="stylesheet">
+	<link href="css/levels-ui.css" rel="stylesheet">
+	</script>
+</head>
+<body onkeypress="checkPress(event)">
+	<!-- Intro CD Player Container/Cutscene -->
+	<div id='cdplayer' class='cdplayer hide'>
+		<h2 id='lcdScreen' style="font-family: DSEG"></h2>
+		<img id='cd' src="img/cd.png"></img>
+		<h4>Influxion CD Player</h4>
+		<br>
+		<i class='fas fa-play'></i><i class='fas fa-stop'></i><i class='fas fa-eject'></i>
+	</div>
+	<!-- Platformer Container -->
+	<div id='canvas' class='canvas hide'></div>
+	<!-- In-Game Cutscene Transition -->
+	<div id='cutscene' class='cutscene hide'>
+		<h1></h1>
+	</div>
+	<!-- Boss Battle UI -->
+	<div id="boss-battle-ui" class="boss-battle hide">
+		<div id="boss-contain">
+			<div id="bossDiv">
+			</div>
+		</div>
+		<div class="scoreboard">
+			<div class="stats score">
+				<span css-contain="">&nbsp;Your Score:&nbsp;<span id="score">0</span></span>
+			</div>
+			<div class="stats health">
+				<span css-contain="">Your Health:&nbsp;<span id="health">100</span></span>
+			</div>
+			<div class="stats boss">
+				<span css-contain="">Boss Health:&nbsp;<span id="boss-health">100</span></span>
+			</div>
+		</div>
+		
+		<div class="viz-contain">
+			<div class="red viz" id="viz1"></div>
+			<div class="blue viz" id="viz2"></div>
+			<div class="yellow viz" id="viz3"></div>
+			<div class="green viz" id="viz4"></div>
+		</div>
+		<h4 class="ratings" id="ratings">Use A,S,D,F to hit the boss when it hovers over a color</h4>
+	</div>
+	<!-- Levels Screen UI -->
+	<div id="levels">
+		<div class="sticky-hdr">
+			<header>
+				<span class="ttl">CHOOSE A CD</span>
+				<hr class="white">
+			</header>
+			<div id="legend">
+				<div style="width: 150px; text-align: left; display: inline-block;">
+					<span class="legend-item"><i class="fas fa-circle" style="color:cornflowerblue;"></i>&nbsp;⁠—⁠—&nbsp;Easy</span><br>
+					<span class="legend-item"><i class="fas fa-circle" style="color:green;"></i>&nbsp;⁠—⁠—&nbsp;Normal</span><br>
+					<span class="legend-item"><i class="fas fa-circle" style="color:let(--disabled-red);"></i>&nbsp;⁠—⁠—&nbsp;Difficult</span>
+					<div id="stars-count">
+						<i class="fas fa-star"></i>
+						<span id="star-amount" class="amt">0</span>
+					</div>
+				</div><br>
+				<hr class="white">
+			</div>
+		</div>
+		<div id="level-list">
+		</div>
+		<hr class="white">
+		<h1>
+		<h1>Community Levels</h1>
+		<h3>Make your own levels <a style="text-decoration: underline; cursor: pointer;" href="./designer.html">here!</a></h3>
+		<div id="level-list-c"></div>
+				
+	</div>
+	<!-- Popup/Alert Box -->
+	<div id="popup" class="hide">
+		<span id="popup-title">Tantalizing Title</span>
+		<hr class="white">
+		<span id="popup-body">Tempermental Text</span>
+		<hr class="white">
+		<button class="btn" id="popup-btn">Beautiful Button</button>
+	</div>
+	<div id="popup-2" class="hide">
+		<span id="popup-title-2">Tantalizing Title</span>
+		<hr class="white">
+		<span id="popup-body-2">Tempermental Text</span>
+		<hr class="white">
+		<button class="btn" id="popup-btn-yes">Beautiful Button</button>
+		<button class="btn" id="popup-btn-no">Beautiful Button</button>
+	</div>
+	<div id="win-lose-popup" class="hide">
+		<div class="inner">
+			<span id="win-message">You Defeated The Boss!</span>
+			<hr class="white">
+			<span id="win-stars-earned">You Earned 4 Stars!</span><br>
+			<span id="final-score">Your Final Score Was 0.</span>
+			<hr class="white">
+			<button onclick="reloadLevelsPage();" class="btn">Continue</button>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="js/howler.js"> 
+	</script>
+	<script src="js/ui.js">
+	</script> 
+	<script src="js/storage.js">
+	</script> 
+	<script src="js/sounds.js">
+	</script> 
+	<script src="js/konva.js">
+	</script>
+	<script src="js/init.js">
+	</script> 
+	<script src="js/effects.js">
+	</script> 
+	<script src="js/game.js">
+	</script> 
+	<script src="js/cutscene.js">
+	</script> 
+</body>
+</html>

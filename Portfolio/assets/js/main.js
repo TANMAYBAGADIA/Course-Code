@@ -7,8 +7,8 @@
 (function($) {
   "use strict";
 
-  var nav = $('nav');
-  var navHeight = nav.outerHeight();
+  let nav = $('nav');
+  let navHeight = nav.outerHeight();
 
   $('.navbar-toggler').on('click', function() {
     if (!$('#mainNav').hasClass('navbar-reduce')) {
@@ -54,13 +54,13 @@
   });
 
   /*--/ Star Scrolling nav /--*/
-  var mainNav_height = $('#mainNav').outerHeight() - 22;
+  let mainNav_height = $('#mainNav').outerHeight() - 22;
   $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+      let target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-        var scrollto = target.offset().top - mainNav_height;
+        let scrollto = target.offset().top - mainNav_height;
         $('html, body').animate({
           scrollTop: scrollto
         }, 1000, "easeInOutExpo");
@@ -71,9 +71,9 @@
 
   // Scroll to sections on load with hash links
   if (window.location.hash) {
-    var initial_nav = window.location.hash;
+    let initial_nav = window.location.hash;
     if ($(initial_nav).length) {
-      var scrollto_initial = $(initial_nav).offset().top - mainNav_height;
+      let scrollto_initial = $(initial_nav).offset().top - mainNav_height;
       $('html, body').animate({
         scrollTop: scrollto_initial
       }, 1000, "easeInOutExpo");
@@ -95,8 +95,8 @@
   /*--/ Navbar Menu Reduce /--*/
   $(window).trigger('scroll');
   $(window).on('scroll', function() {
-    var pixels = 50;
-    var top = 1200;
+    let pixels = 50;
+    let top = 1200;
     if ($(window).scrollTop() > pixels) {
       $('.navbar-expand-md').addClass('navbar-reduce');
       $('.navbar-expand-md').removeClass('navbar-trans');
@@ -115,8 +115,8 @@
 
   /*--/ Star Typed /--*/
   if ($('.text-slider').length == 1) {
-    var typed_strings = $('.text-slider-items').text();
-    var typed = new Typed('.text-slider', {
+    let typed_strings = $('.text-slider-items').text();
+    let typed = new Typed('.text-slider', {
       strings: typed_strings.split(','),
       typeSpeed: 80,
       loop: true,

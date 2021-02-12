@@ -14,7 +14,7 @@
     $.fn.counterUp = function (options) {
 
         // Defaults
-        var settings = $.extend({
+        let settings = $.extend({
                 'time': 400,
                 'delay': 10,
                 'offset': 100,
@@ -29,7 +29,7 @@
         return this.each(function () {
 
             // Store the object
-            var $this = $(this),
+            let $this = $(this),
                 counter = {
                     time: $(this).data('counterup-time') || settings.time,
                     delay: $(this).data('counterup-delay') || settings.delay,
@@ -38,21 +38,21 @@
                     context: $(this).data('counterup-context') || settings.context
                 };
 
-            var counterUpper = function () {
-                var nums = [];
-                var divisions = counter.time / counter.delay;
-                var num = $this.attr('data-num') ? $this.attr('data-num') : $this.text();
-                var isComma = /[0-9]+,[0-9]+/.test(num);
+            let counterUpper = function () {
+                let nums = [];
+                let divisions = counter.time / counter.delay;
+                let num = $this.attr('data-num') ? $this.attr('data-num') : $this.text();
+                let isComma = /[0-9]+,[0-9]+/.test(num);
                 num = num.replace(/,/g, '');
-                var decimalPlaces = (num.split('.')[1] || []).length;
+                let decimalPlaces = (num.split('.')[1] || []).length;
                 if (counter.beginAt > num)
                     counter.beginAt = num;
 
-                var isTime = /[0-9]+:[0-9]+:[0-9]+/.test(num);
+                let isTime = /[0-9]+:[0-9]+:[0-9]+/.test(num);
 
                 // Convert time to total seconds
                 if (isTime) {
-                    var times = num.split(':'),
+                    let times = num.split(':'),
                         m = 1;
                     s = 0;
                     while (times.length > 0) {
@@ -62,16 +62,16 @@
                 }
 
                 // Generate list of incremental numbers to display
-                for (var i = divisions; i >= counter.beginAt / num * divisions; i--) {
+                for (let i = divisions; i >= counter.beginAt / num * divisions; i--) {
 
-                    var newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
+                    let newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
 
                     // Add incremental seconds and convert back to time
                     if (isTime) {
                         newNum = parseInt(s / divisions * i);
-                        var hours = parseInt(newNum / 3600) % 24;
-                        var minutes = parseInt(newNum / 60) % 60;
-                        var seconds = parseInt(newNum % 60, 10);
+                        let hours = parseInt(newNum / 3600) % 24;
+                        let minutes = parseInt(newNum / 60) % 60;
+                        let seconds = parseInt(newNum % 60, 10);
                         newNum = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
                     }
 
@@ -91,7 +91,7 @@
                 $this.text(counter.beginAt);
 
                 // Updates the number until we're done
-                var f = function () {
+                let f = function () {
                     if (!$this.data('counterup-nums')) {
                         settings.callback.call(this);
                         return;

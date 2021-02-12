@@ -1,37 +1,35 @@
-const products = [
+const productsarray=[
     {
-        id: 1,
-        name: "Laptop",
-        price: "$1000",
-        
-    },
-    {
-        id: 2,
-        name: "Iphone",
-        price: "$500",
-        
-    },
-    {
-        id: 3,
-        name: "Microwave",
-        price: "$200",
+        name:"Car",
+        price:"Rs.600",
+        id:"1",
+        image:"Car.jpg",
+        detail:"White Oversized Sweatshirt"
+    },{
+        name:"Scrunchies",
+        price:"Rs.200",
+        id:"2",
+        image:"Iphone 12.jpg",
+        detail:"Pack of 4- Nude Shades"
+    },{
+        name:"Baggy Jeans",
+        price:"Rs.800",
+        id:"3",
+        image:"laptop.jpg",
+        detail:"Light Wash Denims"
+        },
+        {
+        name:"Microwave",
+        price:"Rs.500",
+        id:"4",
         image:"Microwave.jpg",
-    },
-    {
-        id: 4,
-        name: "TV",
-        price: "$500"
-    },
-    {
-        id: 5,
-        name: "Playstation",
-        price: "$750",
-    },
-    {
-        id: 6,
-        name: "Car",
-        price: "$20000",
-    },
+        detail:"Pastel Colored Flannel"
+        },
+        {
+        name:"Skater Pants",
+        price:"Rs.850",
+        id:"5",
+        image:"playstation 5.jpg",
+        detail:"Khaki color pants"
+        }
 ]
-
-

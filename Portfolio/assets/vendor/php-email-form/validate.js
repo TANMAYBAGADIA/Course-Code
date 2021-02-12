@@ -4,20 +4,20 @@ jQuery(document).ready(function($) {
   //Contact
   $('form.php-email-form').submit(function() {
    
-    var f = $(this).find('.form-group'),
+    let f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
      
-      var i = $(this); // current input
-      var rule = i.attr('data-rule');
+      let i = $(this); // current input
+      let rule = i.attr('data-rule');
 
       if (rule !== undefined) {
-        var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
+        let ierror = false; // error flag for current input
+        let pos = rule.indexOf(':', 0);
         if (pos >= 0) {
-          var exp = rule.substr(pos + 1, rule.length);
+          let exp = rule.substr(pos + 1, rule.length);
           rule = rule.substr(0, pos);
         } else {
           rule = rule.substr(pos + 1, rule.length);
@@ -60,14 +60,14 @@ jQuery(document).ready(function($) {
     });
     f.children('textarea').each(function() { // run all inputs
 
-      var i = $(this); // current input
-      var rule = i.attr('data-rule');
+      let i = $(this); // current input
+      let rule = i.attr('data-rule');
 
       if (rule !== undefined) {
-        var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
+        let ierror = false; // error flag for current input
+        let pos = rule.indexOf(':', 0);
         if (pos >= 0) {
-          var exp = rule.substr(pos + 1, rule.length);
+          let exp = rule.substr(pos + 1, rule.length);
           rule = rule.substr(0, pos);
         } else {
           rule = rule.substr(pos + 1, rule.length);
@@ -90,10 +90,10 @@ jQuery(document).ready(function($) {
       }
     });
     if (ferror) return false;
-    else var str = $(this).serialize();
+    else let str = $(this).serialize();
 
-    var this_form = $(this);
-    var action = $(this).attr('action');
+    let this_form = $(this);
+    let action = $(this).attr('action');
 
     if( ! action ) {
       this_form.find('.loading').slideUp();
